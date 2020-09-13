@@ -39,6 +39,31 @@ public class nd_5_masyvai {
         System.out.println("Masyve esančių elementų suma: "+sum);
 
         System.out.format("Masyve esančių elementų vidurkis: %.3f", average);
+
+
+        System.out.println("");
+
+        System.out.println("Rikiavimas (bubble sort algoritmas)");
+        // int[] intArr6 = { 4, 1, 2, 0, 6, 3 }; // rezultatas turėtų būti: 0, 1, 2, 4, 6
+        double[] arr2 = arr;
+        System.out.println("Prieš rikiavimą: " + Arrays.toString(arr));
+        int iterationCounter = 0, swapCounter = 0;
+
+        for (int k = 0; k < arr2.length - 1; k++) {
+            for(int kidx = 0; kidx < arr2.length - 1 - k; kidx++) {
+                iterationCounter++;
+                if(arr2[kidx] > arr2[kidx + 1]){
+                    swapCounter++;
+                    double temporary = arr2[kidx + 1];
+                    arr2[kidx + 1] = arr2[kidx];
+                    arr2[kidx] = temporary;
+                }
+            }
+        }
+
+        System.out.println("Iteracijų : " + iterationCounter);
+        System.out.println("Apkeitimų vietomis : " + swapCounter);
+        System.out.println("Po rikiavimo: " + Arrays.toString(arr));
 }
 }
 
