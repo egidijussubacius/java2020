@@ -1,26 +1,28 @@
-package com.egidijus.app;
+package com.egidijus.app.Namu_darbai;
 
 import java.util.Scanner;
-public class kazkas {
+
+public class nd_6_funkcijos {
+
     public static void main(String[] args) {
-    Scanner input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
-    //allow user  input;
+        //allow user  input;
         System.out.println("Įveskite iš kiek narių bus masyvas?");
-    int num = input.nextInt();
+        int num = input.nextInt();
 
-    int array[] = new int[num];
+        int array[] = new int[num];
 
         System.out.println("Įveskite " + num + " masyvo elementus.");
 
         for (int i = 0 ; i < array.length; i++ ) {
-        array[i] = input.nextInt();
-    }
+            array[i] = input.nextInt();
+        }
 
-    //you notice that now the elements have been stored in the array .. array[]
+        //you notice that now the elements have been stored in the array .. array[]
 
         System.out.println("Įvestas masyvas.");
-    printArray(array);
+        printArray(array);
 
         System.out.println("");
 
@@ -37,7 +39,7 @@ public class kazkas {
         System.out.println("Viso masyvo suma: "+sum);
 
 
-}
+    }
 
     //this method prints the elements in an array......
     //if this case is true, then that's enough to prove to you that the user input has  //been stored in an array!!!!!!!
@@ -77,11 +79,12 @@ public class kazkas {
         int SumValue = inputArray[0];
         for(int i=1;i<inputArray.length;i++){
 
-                SumValue = SumValue + inputArray[i];
+            SumValue = SumValue + inputArray[i];
 
 
         }
         return SumValue;
     }
-
 }
+
+
