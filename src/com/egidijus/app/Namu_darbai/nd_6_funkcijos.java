@@ -39,28 +39,13 @@ public class nd_6_funkcijos {
         int sum = getSum(array);
         System.out.println("Viso masyvo suma: "+sum);
 
-        int[] arr2 = array;
-        System.out.println("Prieš rikiavimą: " + Arrays.toString(array));
-        int iterationCounter = 0, swapCounter = 0;
-
-        for (int k = 0; k < arr2.length - 1; k++) {
-            for(int kidx = 0; kidx < arr2.length - 1 - k; kidx++) {
-                iterationCounter++;
-                if(arr2[kidx] > arr2[kidx + 1]){
-                    swapCounter++;
-                    int temporary = arr2[kidx + 1];
-                    arr2[kidx + 1] = arr2[kidx];
-                    arr2[kidx] = temporary;
-                }
-            }
-        }
-
-        System.out.println("Iteracijų : " + iterationCounter);
-        System.out.println("Apkeitimų vietomis : " + swapCounter);
-        System.out.println("Po rikiavimo: " + Arrays.toString(array));
-
+        // Calling getSum() method for getting sum value
+        int[] sort = getSort(array);
+        System.out.println("Viso masyvo suma: "+ Arrays.toString(array));
 
     }
+
+
 
     //this method prints the elements in an array......
     //if this case is true, then that's enough to prove to you that the user input has  //been stored in an array!!!!!!!
@@ -107,6 +92,27 @@ public class nd_6_funkcijos {
         return SumValue;
     }
 
+
+    public static int[] getSort(int[] inputArray){
+
+        int[] SortValue = inputArray;
+        System.out.println("Prieš rikiavimą: " + Arrays.toString(inputArray));
+        int iterationCounter = 0, swapCounter = 0;
+
+        for (int k = 0; k < SortValue.length - 1; k++) {
+            for(int kidx = 0; kidx < SortValue.length - 1 - k; kidx++) {
+                iterationCounter++;
+                if(SortValue[kidx] > SortValue[kidx + 1]){
+                    swapCounter++;
+                    int temporary = SortValue[kidx + 1];
+                    SortValue[kidx + 1] = SortValue[kidx];
+                    SortValue[kidx] = temporary;
+                }
+            }
+
+        }
+        return SortValue;
+    }
 
 }
 
