@@ -1,5 +1,6 @@
 package com.egidijus.app.Namu_darbai;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class nd_6_funkcijos {
@@ -37,6 +38,26 @@ public class nd_6_funkcijos {
         // Calling getSum() method for getting sum value
         int sum = getSum(array);
         System.out.println("Viso masyvo suma: "+sum);
+
+        int[] arr2 = array;
+        System.out.println("Prieš rikiavimą: " + Arrays.toString(array));
+        int iterationCounter = 0, swapCounter = 0;
+
+        for (int k = 0; k < arr2.length - 1; k++) {
+            for(int kidx = 0; kidx < arr2.length - 1 - k; kidx++) {
+                iterationCounter++;
+                if(arr2[kidx] > arr2[kidx + 1]){
+                    swapCounter++;
+                    int temporary = arr2[kidx + 1];
+                    arr2[kidx + 1] = arr2[kidx];
+                    arr2[kidx] = temporary;
+                }
+            }
+        }
+
+        System.out.println("Iteracijų : " + iterationCounter);
+        System.out.println("Apkeitimų vietomis : " + swapCounter);
+        System.out.println("Po rikiavimo: " + Arrays.toString(array));
 
 
     }
@@ -85,6 +106,8 @@ public class nd_6_funkcijos {
         }
         return SumValue;
     }
+
+
 }
 
 
