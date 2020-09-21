@@ -5,15 +5,12 @@ public class dest_pvz {
         public static void main(String[] args) {
             // Tipas objektoPavadinimas = new Konstruktorius();
             Employee employee1 = new Employee();
-            employee1.name = "Mindaugas";
             employee1.surname = "Jonaitis";
 
             Employee employee2 = new Employee();
-            employee2.name = "Petras";
             employee2.surname = "Peraitis";
 
             Employee employee3 = new Employee();
-            employee3.name = "Juozas";
             employee3.surname = "Juozaitis";
 
             Employee employee4 = new Employee("Tomas", "Tomaitis");
@@ -31,32 +28,35 @@ public class dest_pvz {
         }
     }
 
-    class Employee {
-        public void setAge(int age){
-            if(age <= 0 || age > 125){
-                System.out.println("Please provide valid age!");
-            } else {
-                this.age = age;
-            }
+
+
+
+class Employee {
+    public String name;
+
+    public void setAge(int age) {
+        if (age <= 0 || age > 125) {
+            System.out.println("Please provide valid age!");
+        } else {
+            this.age = age;
         }
+    }
 
 
-        // fieldai, laukai, savybės
-        String name;
-        String surname;
-        private int age;
+    String surname;
+    private int age;
 
-        // ... overloaded konstruktorius
-        // ... be parametrų
-        public Employee(){}
+    // ... overloaded konstruktorius
+    // ... be parametrų
+    public Employee() {
+    }
 
-        // ... parametrizuotas konstruktorius
-        public Employee(String n, String s) {
-            this.name = n;
-            this.surname = s;
-        }
+    // ... parametrizuotas konstruktorius
+    public Employee(String n, String s) {
+        this.surname = s;
+    }
 
-        public int getAge(){
-            return this.age;
-        }
+    public int getAge() {
+        return this.age;
+    }
 }
